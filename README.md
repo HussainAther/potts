@@ -105,5 +105,13 @@ Nice-to-haves
 + Limitations
   + Not denovo--heavily relies on the existence of function already in nature
 
+## Energy-based Out-of-distribution Detection: https://arxiv.org/abs/2010.03759
+
++ For classification problems, instead of relying on softmax confidence score, use an energy score
+  + Don’t need to train an EBM generative model for this!
++ Ultimate goal: reduce false positives, and may provide insight into where to explore
++ Introduced an energy-based classifier by including an energy-based regularization term in the loss
+  + Explicitly penalizes high E for in-distribution and low E for out-of-distribution
+  + Improves false positives at TPR95% on all datasets tested without sacrificing classification accuracy
 
 
