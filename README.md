@@ -24,6 +24,7 @@ Nice-to-haves
 
 + HMMs can struggle with sequence identities lower than 20%, which can still have similar structure (e.g. fibronectin)
 + History: coevolution implies structural contacts
++ + ![](https://github.com/HussainAther/potts/blob/main/img/structuralcontacts.png)
 + Can use mutual information or statistical coupling, but these model local correlations
 + Potts model can model indirect correlations, beyond pairwise (A → B → C could mean A and C are also correlated)
 + Start from maximum entropy distribution for p(sequence), then add constraints (first order and second order amino acid frequencies in data), solve using Lagrange multipliers
@@ -97,6 +98,7 @@ Nice-to-haves
 + Low sequence identities of designs (~25%) but many have appreciable activity, some even exceeds activity of wildtype
 + Probabilities under the model correspond well with function of CM enzyme, below a threshold very few sequences function
   + But just sampling from the PSSM derived from MSA (only first order frequencies are modelled here), though high probability under model, performs poorly.
+  + ![](https://github.com/HussainAther/potts/blob/main/img/structuralcontacts.png)
 + Three-residue correlations exist in the Potts model, even though it was only trained on first and second order correlations!
 + Estimate the size of sequence space that can form functional enzymes
   + e^{entropy}
