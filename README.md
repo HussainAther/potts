@@ -29,6 +29,7 @@ Nice-to-haves
 + Potts model can model indirect correlations, beyond pairwise (A → B → C could mean A and C are also correlated)
 + Start from maximum entropy distribution for p(sequence), then add constraints (first order and second order amino acid frequencies in data), solve using Lagrange multipliers
 + Rearrangement gives a Boltzmann energy functional form, where energies comes from single and double pairs from data
++ + ![](https://github.com/HussainAther/potts/blob/main/img/boltzmannenergy.png)
 + Applications
   + Contact prediction, structure prediction from Direct Coupling Analysis from contact maps
   + Free energy landscapes
@@ -56,6 +57,7 @@ Nice-to-haves
   + Also add pseudocounts with a Dirichlet prior
 + Inference
   + Boltzmann machine learning
+  + + ![](https://github.com/HussainAther/potts/blob/main/img/boltzmannml.png)
   + Guaranteed to converge for small enough ε 
   + Runtime is still slow for sequence lengths > 200 
   + Approximation methods like Gaussian Approximation, Mean field approximation and Psudolikelihood Maximization does not accurately reproduce empirical frequencies!
@@ -80,6 +82,7 @@ Nice-to-haves
 + Mutual information between residue pairs don’t work well
   + Can’t resolve transitive correlations (A → B, B → C but A → C is false)
 + Input is the MSA from a Pfam! More coverage the more accurate
++ + ![](https://github.com/HussainAther/potts/blob/main/img/evmutationfitting.png)
 
 ## EVMutation: https://marks.hms.harvard.edu/evmutation/
 
@@ -98,8 +101,9 @@ Nice-to-haves
 + Low sequence identities of designs (~25%) but many have appreciable activity, some even exceeds activity of wildtype
 + Probabilities under the model correspond well with function of CM enzyme, below a threshold very few sequences function
   + But just sampling from the PSSM derived from MSA (only first order frequencies are modelled here), though high probability under model, performs poorly.
-  + ![](https://github.com/HussainAther/potts/blob/main/img/structuralcontacts.png)
+  + ![](https://github.com/HussainAther/potts/blob/main/img/probabiltiescm.png)
 + Three-residue correlations exist in the Potts model, even though it was only trained on first and second order correlations!
++ + ![](https://github.com/HussainAther/potts/blob/main/img/threeresidue.png)
 + Estimate the size of sequence space that can form functional enzymes
   + e^{entropy}
 + Extensions
@@ -113,6 +117,7 @@ Nice-to-haves
   + Don’t need to train an EBM generative model for this!
 + Ultimate goal: reduce false positives, and may provide insight into where to explore
 + Introduced an energy-based classifier by including an energy-based regularization term in the loss
++ + ![](https://github.com/HussainAther/potts/blob/main/img/Lenergy.png)
   + Explicitly penalizes high E for in-distribution and low E for out-of-distribution
   + Improves false positives at TPR95% on all datasets tested without sacrificing classification accuracy
 
