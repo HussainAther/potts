@@ -14,11 +14,13 @@ On Pfam family and HHblits result of 6EQD, 4EB0, 6QZ4 do:
 4. Visualize sequences with a sequence logo, compute average sequence identity to training sequences.
 
 Nice-to-haves
-1. Using an independent homology predictor, compute the fraction of sampled sequences that are homologous to the wildtype from each training method
-2. Model the structure of some generated sequences from each training method and compute the Rosetta energy
-3. Introduce a temperature parameter in the Potts model to control sequence diversity
-4. Try another training strategy: No MCMC for me
-5. Try another discrete sampling strategy: Oops I took a gradient
+1. Using an independent homology predictor, compute the fraction of sampled sequences that are homologous to the wildtype from each training method.
+2. Model the structure of some generated sequences from each training method and compute the Rosetta energy.
+3. Introduce a temperature parameter in the Potts model to control sequence diversity.
+4. Try another training strategy: No MCMC for me.
+5. Try another discrete sampling strategy: Oops I took a gradient.
+6. Train the model with the three training strategies on disordered proteins such as neural cell adhesion molecule.
+7. Release usable code to run our training procedure with just a single command line.
 
 ## Potts Model and Protein Covariation: https://ronlevygroup.cst.temple.edu/courses/2017_spring/chem5412/lectures/Lecture4_SBII_2017.pdf
 
